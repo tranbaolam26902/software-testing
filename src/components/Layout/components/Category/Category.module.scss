@@ -1,0 +1,33 @@
+.wrapper {
+    padding-top: 16px;
+    width: 100%;
+    height: max-content;
+    border-radius: 16px;
+}
+.title {
+    margin-left: 8px;
+    font-weight: bold;
+    color: var(--text-secondary-50);
+}
+.categories {
+    margin-top: 16px;
+    list-style-type: none;
+}
+.category {
+    display: inline-block;
+    padding: 4px 16px;
+    background-color: var(--primary);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    transition: all ease 0.1s;
+}
+.category:hover {
+    color: var(--secondary);
+    box-shadow: 0 0 2px 0 currentColor;
+}
+.span + .span,
+.span:first-child {
+    margin-right: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}

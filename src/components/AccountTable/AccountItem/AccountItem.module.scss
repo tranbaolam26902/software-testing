@@ -1,0 +1,10 @@
+.wrapper {
+    padding: 16px;
+    background-color: var(--primary);
+    &:nth-child(2n + 1) {
+        background-color: var(--background);
+    }
+}
+.delete {
+    color: var(--red);
+}

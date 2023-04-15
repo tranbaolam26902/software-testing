@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8px;
+    &::after {
+        content: '';
+        position: absolute;
+        left: -38px;
+        bottom: 0;
+        width: 4px;
+        height: 52px;
+        background-color: var(--white);
+    }
+}
+.comment {
+    flex: 1;
+    display: inline-block;
+    margin: 0 16px;
+    padding: 8px 16px;
+    background-color: var(--white);
+    border: 2px solid var(--gray-50);
+    border-radius: 16px;
+    &:focus {
+        border-color: var(--text-secondary-80);
+    }
+}

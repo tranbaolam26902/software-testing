@@ -1,0 +1,44 @@
+.user-actions {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+}
+.option {
+    padding: 8px 16px;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    &:hover {
+        color: var(--text-color);
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    &.logout {
+        color: var(--red);
+    }
+}
+.avatar {
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    img {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+}
+.image {
+    &.isVertical {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: unset;
+        transform: translateX(0);
+        transform: translateY(-50%);
+    }
+}
