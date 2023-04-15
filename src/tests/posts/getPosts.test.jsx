@@ -1,4 +1,4 @@
-import getPosts from './getPosts';
+import { getPosts, test } from './getPosts';
 
 it('Test get posts API', async () => {
     const posts = await getPosts();
@@ -2148,4 +2148,9 @@ it('Test get posts API', async () => {
     ];
 
     expect(posts).toEqual(expectedData);
+});
+
+it('test test', async () => {
+    const data = await test();
+    expect(data.UserName).toEqual('admin');
 });

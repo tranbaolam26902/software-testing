@@ -21,7 +21,7 @@ import {
     SET_ACCOUNT_DATA,
 } from './constants';
 
-const apiURL = 'https://localhost:44332';
+const apiURL = 'http://192.168.43.237:8888';
 
 const initStates = {
     apiURL: apiURL,
