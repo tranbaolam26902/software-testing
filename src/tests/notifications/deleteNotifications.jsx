@@ -17,7 +17,7 @@ async function deletesNotification() {
 async function deleteAllNotifications() {
     const token = await getToken();
 
-    return await _fetch(process.env.REACT_APP_API_ENDPOINT + '/api/UserNotify/DeleteAll ', {
+    return await _fetch(process.env.REACT_APP_API_ENDPOINT + '/api/UserNotify/DeleteAll', {
         headers: {
             Authorization: token,
         },
