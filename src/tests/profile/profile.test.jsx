@@ -9,5 +9,5 @@ it('Test edit profile api', async () => {
 it('Test change password api', async () => {
     const profiles = await changePassword();
 
-    expect(profiles.length !== 0);
+    expect(profiles.formData);
 });
