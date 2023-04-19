@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
 
-import { useStore, actions, useToken } from '../../../store';
+import { actions, useStore, useToken } from '../../../store';
 import styles from './CommentSection.module.scss';
 
 import Avatar from '../../Avatar';
@@ -76,6 +76,7 @@ function CommentSection() {
                 ParentId: '',
                 LevelComment: 1,
             };
+            console.log(postData.Id);
             formData.append('comment', JSON.stringify(commentData));
             fetch(`${apiURL}/api/usercomment/create`, {
                 method: 'POST',

@@ -1,9 +1,9 @@
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
-import { useStore, actions } from '../../../store';
-import styles from './CommentOptions.module.scss';
 import icons from '../../../assets/icons';
+import { actions, useStore } from '../../../store';
+import styles from './CommentOptions.module.scss';
 
 import { Wrapper as PopoverWrapper } from '../../Popover';
 
@@ -25,6 +25,7 @@ function CommentOptions({ data, setIsEditing }) {
 
     // Event handlers
     const handleDelete = () => {
+        console.log(data.Id);
         if (window.confirm('Xác nhận xóa bình luận?')) {
             const formData = new FormData();
             formData.append('id', data.Id);
