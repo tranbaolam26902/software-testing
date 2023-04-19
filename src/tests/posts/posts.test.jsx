@@ -6,19 +6,19 @@ import { getPopularPosts, getPosts, getPostsByCategory } from './getPosts';
 it('Test get posts api', async () => {
     const posts = await getPosts();
 
-    expect(posts.length !== 0);
+    expect(Array.isArray(posts)).toEqual(true);
 });
 
 it('Test get popular posts api', async () => {
     const posts = await getPopularPosts();
 
-    expect(posts.length !== 0);
+    expect(Array.isArray(posts)).toEqual(true);
 });
 
 it('Test get posts by category api', async () => {
     const posts = await getPostsByCategory();
 
-    expect(posts.length !== 0);
+    expect(Array.isArray(posts)).toEqual(true);
 });
 
 it('Test create post api', async () => {
@@ -30,7 +30,7 @@ it('Test create post api', async () => {
 it('Test delete post api', async () => {
     const posts = await deletePost();
 
-    expect(Array.isArray(posts));
+    expect(Array.isArray(posts)).toEqual(true);
 });
 
 it('Test edit post api', async () => {
