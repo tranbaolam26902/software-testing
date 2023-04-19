@@ -1,14 +1,21 @@
 import { createCategory } from './createCategory';
 import { deleteCategory } from './deleteCategory';
+import { getCategories } from './getCategories';
 
 it('Test create categories api', async () => {
-    const categories = await createCategory();
+    const category = await createCategory();
 
-    expect(categories.responseCategories);
+    expect(category.Id).toBeDefined();
 });
 
 it('Test delete categories api', async () => {
     const categories = await deleteCategory();
 
-    expect(categories.responseCategories);
+    expect(Array.isArray(categories)).toEqual(true);
+});
+
+it('Test get categories API', async () => {
+    const categories = await getCategories();
+
+    expect(Array.isArray(categories)).toEqual(true);
 });
