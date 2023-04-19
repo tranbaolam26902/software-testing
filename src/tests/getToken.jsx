@@ -1,5 +1,5 @@
 export default async function getToken() {
-    return fetch('http://192.168.43.237:8888/token', {
+    return fetch(process.env.REACT_APP_API_ENDPOINT + '/token', {
         method: 'POST',
         body: `grant_type=password&username=admin&password=Admin#123`,
     })
