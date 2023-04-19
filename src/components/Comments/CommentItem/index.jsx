@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
+import { useEffect, useState } from 'react';
 
-import { useStore, actions, useToken } from '../../../store';
-import styles from './CommentItem.module.scss';
 import icons from '../../../assets/icons';
+import { actions, useStore, useToken } from '../../../store';
+import styles from './CommentItem.module.scss';
 
 import Avatar from '../../Avatar';
-import ReplyComment from '../ReplyComment';
-import CommentOptions from '../CommentOptions';
 import { ButtonToProfile } from '../../Buttons';
+import CommentOptions from '../CommentOptions';
+import ReplyComment from '../ReplyComment';
 
 const cx = classNames.bind(styles);
 
@@ -109,6 +109,7 @@ function CommentItem({ data }) {
                 Content: comment,
                 Id: data.Id,
             };
+            console.log(commentData);
             formData.append('comment', JSON.stringify(commentData));
             fetch(`${apiURL}/api/usercomment/edit`, {
                 method: 'POST',
@@ -123,9 +124,9 @@ function CommentItem({ data }) {
                     updatePostData(responseCommentData);
                     updatePosts();
                 });
+            console.log(formData);
         }
     };
-
     useEffect(() => {
         checkIsPersonalPost();
         // eslint-disable-next-line
