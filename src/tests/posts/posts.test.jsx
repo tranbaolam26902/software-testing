@@ -18,6 +18,8 @@ it('Test get popular posts api', async () => {
 it('Test get posts by category api', async () => {
     const posts = await getPostsByCategory();
 
+    console.log(posts);
+
     expect(Array.isArray(posts)).toEqual(true);
 });
 

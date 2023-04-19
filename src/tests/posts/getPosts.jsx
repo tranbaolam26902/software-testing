@@ -12,7 +12,7 @@ async function getPopularPosts() {
 async function getPostsByCategory() {
     const formData = new FormData();
     formData.append('id', 'f3b1f97e-5301-49f3-a292-19a8b3e63108');
-    return await _fetch(process.env.REACT_APP_API_ENDPOINT + '/api/post/FindPostCategory', {
+    return await fetch(process.env.REACT_APP_API_ENDPOINT + '/api/post/FindPostCategory', {
         method: 'POST',
         body: formData,
     }).then((response) => response.json());
