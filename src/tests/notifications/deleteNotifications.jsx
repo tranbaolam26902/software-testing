@@ -11,7 +11,7 @@ async function deletesNotification() {
             Authorization: token,
         },
         body: formData,
-    }).then((respone) => respone.json());
+    }).then((respone) => respone);
 }
 
 async function deleteAllNotifications() {

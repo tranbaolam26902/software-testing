@@ -25,7 +25,6 @@ function CommentOptions({ data, setIsEditing }) {
 
     // Event handlers
     const handleDelete = () => {
-        console.log(data.Id);
         if (window.confirm('Xác nhận xóa bình luận?')) {
             const formData = new FormData();
             formData.append('id', data.Id);

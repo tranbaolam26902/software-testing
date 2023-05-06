@@ -73,7 +73,6 @@ function CommentItem({ data }) {
         let result = '';
         content.map((word, index) => {
             if (word.includes('http')) {
-                console.log(word);
                 result += ` <a href="${word}" target="__blank" style='color: #007bff;'>Liên kết</a> `;
                 return null;
             }
@@ -109,7 +108,6 @@ function CommentItem({ data }) {
                 Content: comment,
                 Id: data.Id,
             };
-            console.log(commentData);
             formData.append('comment', JSON.stringify(commentData));
             fetch(`${apiURL}/api/usercomment/edit`, {
                 method: 'POST',
@@ -124,7 +122,6 @@ function CommentItem({ data }) {
                     updatePostData(responseCommentData);
                     updatePosts();
                 });
-            console.log(formData);
         }
     };
     useEffect(() => {

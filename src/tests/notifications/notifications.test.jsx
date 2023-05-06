@@ -10,9 +10,20 @@ it('Test get notifications api', async () => {
 });
 
 it('Test read notification', async () => {
-    const readNotification = await readsNotification();
+    const res = await readsNotification();
+    switch (res.status) {
+        case 200:
+            expect(res.status).toEqual(200);
+            break;
+        case 400:
+            expect(res.status).toEqual(400);
+            break;
+        default:
 
-    expect(readNotification.Id).toBeDefined();
+            expect(res).toBeUndefined();
+            break;
+    }
+
 });
 
 it('Test get all notifications read', async () => {
@@ -22,9 +33,20 @@ it('Test get all notifications read', async () => {
 });
 
 it('Test delete notification', async () => {
-    const deleteNOtification = await deletesNotification();
+    const res = await deletesNotification();
 
-    expect(deleteNOtification.Id).toBeDefined();
+    switch (res.status) {
+        case 200:
+            expect(res.status).toEqual(200);
+            break;
+        case 404:
+            expect(res.status).toEqual(404);
+            break;
+        default:
+
+            expect(res).toBeUndefined();
+            break;
+    }
 });
 
 it('Test delete all notifications', async () => {

@@ -8,6 +8,5 @@ it('Test edit profile api', async () => {
 });
 it('Test change password api', async () => {
     const profiles = await changePassword();
-
-    expect(profiles.formData);
+    expect(profiles.status).toEqual(200);
 });

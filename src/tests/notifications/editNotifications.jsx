@@ -12,7 +12,7 @@ async function readsNotification() {
             Authorization: token,
         },
         body: formData,
-    }).then((respone) => respone.json());
+    }).then((respone) => respone);
 }
 
 async function readAllNotifications() {

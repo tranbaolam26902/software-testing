@@ -21,7 +21,7 @@ import {
     SET_USER_ID,
 } from './constants';
 
-const apiURL = 'http://192.168.43.237:8888';
+const apiURL = 'http://127.0.0.1:8888';
 
 const initStates = {
     apiURL: apiURL,

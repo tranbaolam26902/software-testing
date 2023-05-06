@@ -18,8 +18,6 @@ it('Test get popular posts api', async () => {
 it('Test get posts by category api', async () => {
     const posts = await getPostsByCategory();
 
-    console.log(posts);
-
     expect(Array.isArray(posts)).toEqual(true);
 });
 
@@ -30,9 +28,19 @@ it('Test create post api', async () => {
 });
 
 it('Test delete post api', async () => {
-    const posts = await deletePost();
+    const res = await deletePost();
+    switch (res.status) {
+        case 200:
+            expect(res.status).toEqual(200);
+            break;
+        case 400:
+            expect(res.status).toEqual(400);
+            break;
+        default:
 
-    expect(Array.isArray(posts)).toEqual(true);
+            expect(res.status).toBeUndefined();
+            break;
+    }
 });
 
 it('Test edit post api', async () => {

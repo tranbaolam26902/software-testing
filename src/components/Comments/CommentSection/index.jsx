@@ -76,7 +76,6 @@ function CommentSection() {
                 ParentId: '',
                 LevelComment: 1,
             };
-            console.log(postData.Id);
             formData.append('comment', JSON.stringify(commentData));
             fetch(`${apiURL}/api/usercomment/create`, {
                 method: 'POST',

@@ -7,20 +7,17 @@ let idComment = '-1';
 it('editComment', async () => {
     const comment = await editComment();
     expect(comment).toBeDefined();
-    // console.log(comment);
 });
 //Mỗi lẫn chạy nó tạo ra một comment mới trong cái bài viết hình cây cầu
 it('createComment', async () => {
     const comment = await createComment();
     expect(comment).toBeDefined();
-    // console.log(comment);
     idComment = comment.Id;
 });
 //Xóa cái comment phía trên luôn
 it('deleteComment', async () => {
     const comment = await deleteComment(idComment);
     expect(comment).toBeDefined();
-    // console.log(comment);
 });
 
 let idPost = '276b64f0-bc4b-4ea6-9f38-f7cc6dde2397';
@@ -28,5 +25,4 @@ let idPost = '276b64f0-bc4b-4ea6-9f38-f7cc6dde2397';
 it('getPost', async () => {
     const post = await getPostById(idPost);
     expect(post).toBeDefined();
-    // console.log(post);
 });
